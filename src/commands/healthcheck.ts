@@ -9,7 +9,7 @@ const healthCheckCommand: ICommand = {
 
 async function healthCheckHandler(): Promise<boolean> {
 	try {
-		await ping(config.get("minecraft.address"), config.get("minecraft.port"));
+		await ping(config.get("minecraft.address"), config.get("minecraft.port"), {timeout: 3000});
 		return true
 	} catch (e) {
 		return false

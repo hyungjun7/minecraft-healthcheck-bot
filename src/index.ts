@@ -26,6 +26,7 @@ async function bootstrap() {
 			if (!interaction.isChatInputCommand()) return
 
 			let message
+			await interaction.reply("잠시만 기다려보게나! 내 금방 알아오겠네");
 			switch (interaction.commandName) {
 				case healthCheckCommand.name:
 					const isHealthy = await healthCheckHandler()
@@ -35,8 +36,8 @@ async function bootstrap() {
 					message = 'unknown command'
 			}
 
-			await interaction.reply(message);
 			console.log(interaction.commandName, message)
+			await interaction.followUp(message);
 		})
 
 		await client.login(TOKEN)
