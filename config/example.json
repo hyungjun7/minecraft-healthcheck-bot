@@ -1,0 +1,10 @@
+{
+  "discord": {
+    "clientId": "",
+    "botToken": ""
+  },
+  "minecraft": {
+    "address": "",
+    "port": ""
+  }
+}

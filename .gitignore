@@ -1,0 +1,8 @@
+.idea
+default.json
+dist
+node_modules
+*.iml
+Dockerfile
+docker-compose.yml
+deploy.sh
